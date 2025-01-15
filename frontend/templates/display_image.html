@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结果图片</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* 将内容垂直排列 */
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px; /* 图片容器的底部间距 */
+        }
+        .image-container img {
+            margin: 0 10px; /* 调整图片之间的间距 */
+            max-width: 50%; /* 图片最大宽度，根据需要调整 */
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button-container button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f6620c; /* 背景色 */
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #f6620c; /* 鼠标悬停时背景色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/upload.jpg') }}" alt="上传的图片">
+        <img src="{{ url_for('static', filename='images/result.png') }}" alt="处理后的结果">
+    </div>
+    <div class="button-container">
+        <form action="{{ url_for('index') }}" method="get">
+            <button type="submit">再上传一张</button>
+        </form>
+    </div>
+</body>

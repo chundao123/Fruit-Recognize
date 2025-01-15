@@ -1,0 +1,26 @@
+<annotation>
+	<folder>label_data</folder>
+	<filename>banana_5.jpg</filename>
+	<path>D:\AI fruit recognition\label_data\banana_5.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1600</width>
+		<height>1600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>banana</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>280</xmin>
+			<ymin>229</ymin>
+			<xmax>1407</xmax>
+			<ymax>1453</ymax>
+		</bndbox>
+	</object>
+</annotation>
