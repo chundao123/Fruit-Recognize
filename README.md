@@ -1,46 +1,36 @@
-| - __pycache__ - 运行时自动产生的预编译的util
-|
-| - best_weight - 存放可以预测时真正使用的模型参数
-|
-| - fronted - | - static - | - background - 存放网页美化图
-|             |            |
-|             |            | - images - 存放jpg上传图、对应的xml和png结果图
-|             |
-|             | - templates - | - display_image.html - 显示图片的网页
-|             |               |
-|             |               | - upload.html - 上传图片的网页
-|             |
-|             | - app.py - 调用网页，保存上传的图片，调用相关函数
-|
-| - label_data - 标注的20张自己标注的图片jpg和对应mxl(未使用)
-|
-| - test - 下载的数据集，包含60张测试图片jpg和对应mxl
-|
-| - weights - 参数文件夹，存储训练好的模型参数
-|
-| - 运行截图 - 包含一些函数运行的截图
-|
-| - inference.py - 读取一张图片预测并保存相应xml
-|
-| - METRICS.docx - predic.py的输出指标
-|
-| - predict.py - 输入test图片并调用模型计算IoU,Precision,Recall和Mean Average Precision
-|
-| - README.txt - 此文件
-|
-| - train.py - 训练模型并保存参数
-|
-| - util.py - 路径，参数设置和一些功能函数
-|
-| - xml_show.py - 通过jpg和对应xml绘制png结果图
+## 此项目为大二时人工智能原理课程作业
 
+## 项目结构
 
-！！！运行步骤！！！
+### _pycache
+运行时自动产生的预编译文件
 
-1：创建best_weight文件夹于根目录下,从链接 https://pan.baidu.com/s/1wbp5DAln-g0Whr24hc1SVg?pwd=jlbq 下载参数并将其存至/best_weight文件夹下
+### fronted
+前端相关文件，其中：
+static存放图片和结果xml
+templates存放所用网页
+app.py为控制网页运行的代码
 
-2：准备环境，安装关键包：torch, torchvision, flask（可能还用到了一些包但是忘了，请根据实际情况补下）
+### label_data
+队友标注的20张图片和对应xml
 
-3：修改frontend/app.py33合34行的代码，更改里面的解释器路径为自己配置的python.exe
+### test.rar
+数据集的压缩包
 
-4：运行frontend/app.py，进入输出信息里的网址开始预测
+### inference.py
+读取一张图片预测并保存结果xml
+
+### predict.py
+输入test图片并调用模型计算IoU,Precision,Recall和Mean Average Precision
+
+### train.py
+训练模型并保存参数
+
+### util.py
+路径、参数设置和一些功能函数
+
+### xml_show.py
+通过jpg和xml绘制png结果图
+
+## 注意事项
+运行前请：建立weights文件夹用于存放模型；建立best_weight文件夹并将预测用的模型存入其中；修改frontend/app.py33合34行的代码，更改里面的解释器路径为自己配置的python
